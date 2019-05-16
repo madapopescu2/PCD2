@@ -50,7 +50,11 @@ public class SelectPhotos extends AppCompatActivity {
             startActivityForResult(gallery, PICK_IMAGE);
         }
 
-        private void doubleExposure(){ }
+        private void doubleExposure(){
+
+            Intent intent = new Intent(this,MainActivity.class);
+            startActivity(intent);
+        }
 
         @Override
         protected void onActivityResult(int reqestCode, int resultCode, Intent data){
@@ -63,6 +67,9 @@ public class SelectPhotos extends AppCompatActivity {
                     imageUri = item.getUri();
                     arrayUri.add(imageUri);
                 }
+
+
+
             }
         }
 }
