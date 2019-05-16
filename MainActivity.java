@@ -82,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
             for(int j=0; j<width;j++){
                 colorPixel=original.getPixel(i,j);
 
-                if(colorPixel == 255) {
+                if(colorPixel != 255) {
                     A = 255f / (100f / value);
                     R = Color.red(colorPixel);
                     G = Color.green(colorPixel);
